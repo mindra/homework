@@ -1,0 +1,154 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.header {
+  padding-left: 25px;
+  padding-right: 25px;
+  height:80px;
+  display: flex;
+  /* flex-direction:column; */
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(255,105,15);
+  background: linear-gradient(90deg, rgba(255,105,15,1) 52%, rgba(233,57,27,1) 86%);
+
+  &__search-field {
+    flex:auto;
+    background: #ffffff80;
+    height: 50px;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  &__search-field {
+
+    &__input {
+      background: #ffffff00; 
+      border: none;
+      line-height: 30px; 
+      width: 100%;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      padding-left: 5px;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+  }
+
+
+  &__expanded {
+    background-color: white;
+    width: 100%;
+    min-height: 60px;
+    align-self: baseline;
+    margin-top: -10px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows:50px auto;
+    cursor: default;
+    box-shadow: 4px 3px 8px 1px #969696;
+
+    &__icon {
+      height: 30px;
+      width: 30px;
+      padding: 5px;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &__container {
+      width: 100%;
+      grid-column: 2 / 3;
+      grid-row: 1/2;
+      align-self: end;
+      padding-bottom: 5px;
+
+      &__input {
+        background: #ffffff00; 
+        border: none;
+        font-weight: 600;
+        font-size: 16px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      
+      &__placeholder {
+        font-size: 12px;
+        color:gray;
+      }
+
+     
+    }
+
+    &__results {
+      grid-column: 2 / 3;
+      grid-row: 2/3;
+      list-style-type: none;
+
+      & > li {
+        padding: 5px 0 5px 0;
+        cursor: pointer;
+      }
+
+      &__name {
+        font-weight: 600;
+        font-size: 16px; 
+      }
+
+      &__rating {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__search-field {
+     &__input+:focus{
+      outline: none
+     }
+
+     &__icon {
+      height: 30px;
+      width: 50px;
+      fill:white;
+    }
+  }
+   
+  
+  &__search_icon {
+    background-color: white;
+    color:#ff690f;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    line-height: 30px;
+
+    & > svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
